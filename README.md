@@ -62,13 +62,7 @@ Download the latest release, unzip it into `wp-content/plugins/wp-supabase-sync`
 and activate it. No Composer, no build step, no npm — the plugin ships as plain
 PHP, so there is nothing to compile.
 
-Requires **WordPress 6.4+** and **PHP 8.1+**. Verified on both ends of that range:
-
-| WordPress | PHP | Result |
-|---|---|---|
-| 6.4.3 | 8.1.34 | 293 checks, 0 failures |
-| 7.0.2 | 8.3.33 | 293 checks, 0 failures |
-
+Requires **WordPress 6.4+** and **PHP 8.1+**. 
 Because this is distributed here rather than through the WordPress.org directory,
 WordPress will not notify you of updates — watch releases on this repo, or star
 it. Uninstalling never touches your Supabase project.
