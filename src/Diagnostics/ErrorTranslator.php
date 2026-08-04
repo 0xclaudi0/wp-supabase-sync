@@ -32,17 +32,18 @@ defined( 'ABSPATH' ) || exit;
 final class ErrorTranslator {
 
 	/**
-	 * Base URL for the companion playbook.
+	 * Where a failed check sends the reader for background.
 	 *
-	 * A local sibling repo today. When it is published this becomes the public
-	 * URL and every doc link in the plugin follows.
+	 * Supabase's own documentation rather than anything of ours, deliberately: a
+	 * link the plugin controls is a link the plugin can break, and these pages
+	 * explain the underlying Postgres behaviour better than a restatement would.
 	 */
-	public const DOCS_BASE = 'https://github.com/0xclaudi0/supabase-gotchas/blob/main/gotchas/';
+	public const DOCS_BASE = 'https://supabase.com/docs/guides/';
 
-	public const DOC_RLS      = self::DOCS_BASE . '01-rls-empty-results.md';
-	public const DOC_AUTH_UID = self::DOCS_BASE . '02-auth-uid-null.md';
-	public const DOC_STORAGE  = self::DOCS_BASE . '03-storage-permissions.md';
-	public const DOC_POOLING  = self::DOCS_BASE . '04-connection-pooling.md';
+	public const DOC_RLS      = self::DOCS_BASE . 'database/postgres/row-level-security';
+	public const DOC_AUTH_UID = self::DOCS_BASE . 'api/api-keys';
+	public const DOC_STORAGE  = self::DOCS_BASE . 'storage/security/access-control';
+	public const DOC_POOLING  = self::DOCS_BASE . 'database/connecting-to-postgres';
 
 	/**
 	 * Private: instances come from translate(), which does the classifying.

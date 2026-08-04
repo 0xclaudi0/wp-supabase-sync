@@ -104,7 +104,7 @@ $check(
 	$grant->fix()
 );
 $check( 'GRANT 42501: not retryable', ! $grant->retryable() );
-$check( 'GRANT 42501: links to the RLS gotcha', ErrorTranslator::DOC_RLS === $grant->doc_url() );
+$check( 'GRANT 42501: links to the row level security docs', ErrorTranslator::DOC_RLS === $grant->doc_url() );
 
 $rls_error = $from_fixture( '42501_rls_with_check' );
 $rls       = ErrorTranslator::translate( $rls_error, 'wp_content' );
