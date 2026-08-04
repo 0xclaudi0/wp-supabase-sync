@@ -1,0 +1,1277 @@
+# Copyright (C) 2026 Claudio Ibe
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Supabase Sync 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-supabase-sync\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-04T11:36:05+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: wp-supabase-sync\n"
+
+#. Plugin Name of the plugin
+#: wp-supabase-sync.php
+#: src/Settings/SettingsPage.php:46
+#: src/Settings/SettingsPage.php:105
+msgid "WP Supabase Sync"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: wp-supabase-sync.php
+msgid "https://github.com/0xclaudi0/wp-supabase-sync"
+msgstr ""
+
+#. Description of the plugin
+#: wp-supabase-sync.php
+msgid "Connects WordPress to Supabase. Mirrors published content into a Supabase Postgres table so a separate frontend can read it straight from Supabase instead of the WP REST API."
+msgstr ""
+
+#. Author of the plugin
+#: wp-supabase-sync.php
+msgid "Claudio Ibe"
+msgstr ""
+
+#: src/Admin/DiagnosticsPage.php:50
+#: src/Admin/DiagnosticsPage.php:77
+msgid "Supabase Sync Diagnostics"
+msgstr ""
+
+#: src/Admin/DiagnosticsPage.php:51
+#: src/Settings/SettingsPage.php:47
+msgid "Supabase Sync"
+msgstr ""
+
+#: src/Admin/DiagnosticsPage.php:73
+#: src/Admin/LogsPage.php:67
+msgid "You do not have permission to view this page."
+msgstr ""
+
+#. translators: %d: number of failures.
+#: src/Admin/DiagnosticsPage.php:100
+#, php-format
+msgid "%d check failed. The detail below names the layer at fault."
+msgid_plural "%d checks failed. The detail below names the layer at fault."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Admin/DiagnosticsPage.php:110
+msgid "Everything works, with warnings worth reading."
+msgstr ""
+
+#: src/Admin/DiagnosticsPage.php:113
+msgid "All checks passed."
+msgstr ""
+
+#: src/Admin/DiagnosticsPage.php:127
+#: src/Admin/LogsPage.php:82
+msgid "Queue"
+msgstr ""
+
+#. translators: 1: pending, 2: ready, 3: dead, 4: eligible posts.
+#: src/Admin/DiagnosticsPage.php:134
+#, php-format
+msgid "%1$d pending, %2$d ready now, %3$d dead-lettered. %4$d published posts are eligible to sync."
+msgstr ""
+
+#. translators: %s: description of the last run.
+#: src/Admin/DiagnosticsPage.php:143
+#, php-format
+msgid "Last run: %s"
+msgstr ""
+
+#: src/Admin/DiagnosticsPage.php:149
+msgid "Process queue now"
+msgstr ""
+
+#: src/Admin/DiagnosticsPage.php:151
+msgid "Queue a full resync"
+msgstr ""
+
+#: src/Admin/DiagnosticsPage.php:153
+msgid "Retry dead-lettered"
+msgstr ""
+
+#: src/Admin/DiagnosticsPage.php:155
+msgid "Clear queue"
+msgstr ""
+
+#. translators: %s: link to the settings page.
+#: src/Admin/DiagnosticsPage.php:164
+#, php-format
+msgid "Syncing is turned off, so processing the queue will do nothing. Enable it under %s."
+msgstr ""
+
+#: src/Admin/DiagnosticsPage.php:166
+#: src/Admin/Notices.php:67
+msgid "Settings → Supabase Sync"
+msgstr ""
+
+#: src/Admin/DiagnosticsPage.php:178
+msgid "Checks"
+msgstr ""
+
+#: src/Admin/DiagnosticsPage.php:197
+msgid "How to fix it"
+msgstr ""
+
+#: src/Admin/DiagnosticsPage.php:214
+msgid "Background reading on this failure mode"
+msgstr ""
+
+#: src/Admin/DiagnosticsPage.php:225
+msgid "Migration SQL"
+msgstr ""
+
+#: src/Admin/DiagnosticsPage.php:226
+msgid "Generated from your current settings and the plugin's field list, so it cannot drift from what the plugin actually writes. Run it in the Supabase SQL editor. The plugin never executes schema changes itself."
+msgstr ""
+
+#: src/Admin/DiagnosticsPage.php:253
+#: src/Admin/LogsPage.php:193
+msgid "You do not have permission to do that."
+msgstr ""
+
+#. translators: 1: succeeded count, 2: failed count.
+#: src/Admin/DiagnosticsPage.php:313
+#, php-format
+msgid "Queue processed: %1$d succeeded, %2$d failed."
+msgstr ""
+
+#. translators: %d: number of posts queued.
+#: src/Admin/DiagnosticsPage.php:322
+#, php-format
+msgid "Queued %d post(s) for resync."
+msgstr ""
+
+#. translators: %d: number of rows reset.
+#: src/Admin/DiagnosticsPage.php:330
+#, php-format
+msgid "Reset %d dead-lettered item(s) for retry."
+msgstr ""
+
+#. translators: %d: number of rows removed.
+#: src/Admin/DiagnosticsPage.php:338
+#, php-format
+msgid "Removed %d queue row(s)."
+msgstr ""
+
+#: src/Admin/LogsPage.php:44
+#: src/Admin/LogsPage.php:45
+#: src/Admin/LogsPage.php:71
+msgid "Supabase Sync Logs"
+msgstr ""
+
+#: src/Admin/LogsPage.php:85
+msgid "The queue is empty."
+msgstr ""
+
+#: src/Admin/LogsPage.php:93
+msgid "Object"
+msgstr ""
+
+#: src/Admin/LogsPage.php:94
+msgid "Action"
+msgstr ""
+
+#: src/Admin/LogsPage.php:95
+msgid "Status"
+msgstr ""
+
+#: src/Admin/LogsPage.php:96
+msgid "Attempts"
+msgstr ""
+
+#: src/Admin/LogsPage.php:97
+msgid "Next attempt"
+msgstr ""
+
+#: src/Admin/LogsPage.php:98
+msgid "Last error"
+msgstr ""
+
+#: src/Admin/LogsPage.php:111
+msgid "(no title)"
+msgstr ""
+
+#: src/Admin/LogsPage.php:126
+msgid "Recent events"
+msgstr ""
+
+#: src/Admin/LogsPage.php:131
+msgid "Delete logs older than 7 days"
+msgstr ""
+
+#: src/Admin/LogsPage.php:135
+msgid "Nothing logged yet."
+msgstr ""
+
+#: src/Admin/LogsPage.php:143
+msgid "When (UTC)"
+msgstr ""
+
+#: src/Admin/LogsPage.php:144
+msgid "Level"
+msgstr ""
+
+#: src/Admin/LogsPage.php:145
+msgid "Channel"
+msgstr ""
+
+#: src/Admin/LogsPage.php:146
+msgid "Message"
+msgstr ""
+
+#: src/Admin/LogsPage.php:165
+msgid "Details"
+msgstr ""
+
+#: src/Admin/Notices.php:57
+msgid "WP Supabase Sync: your Supabase service role key is stored in the database."
+msgstr ""
+
+#: src/Admin/Notices.php:58
+msgid "That key bypasses row level security, so anyone with a copy of your database — a backup, a staging clone, a leaked dump — has full read and write access to your Supabase project. Move it into wp-config.php instead, then clear it from the settings screen."
+msgstr ""
+
+#. translators: %s: link to the settings screen.
+#: src/Admin/Notices.php:65
+#, php-format
+msgid "Settings for this plugin are under %s."
+msgstr ""
+
+#: src/Client/ApiException.php:36
+msgid "Supabase is not configured: both a project URL and a service role key are required."
+msgstr ""
+
+#. translators: %s: key role, e.g. anon.
+#: src/Client/ApiException.php:45
+#, php-format
+msgid "No %s key is configured."
+msgstr ""
+
+#: src/Client/ApiException.php:54
+msgid "The Supabase project URL is missing or not a valid http/https URL."
+msgstr ""
+
+#: src/Client/ApiException.php:61
+msgid "The configured table name is not a valid Postgres identifier."
+msgstr ""
+
+#. translators: 1: WP_Error code, 2: error message.
+#: src/Client/Response.php:104
+#, php-format
+msgid "the request did not complete (%1$s: %2$s)"
+msgstr ""
+
+#. translators: 1: HTTP status, 2: PostgREST error code, 3: error message.
+#: src/Client/Response.php:116
+#, php-format
+msgid "HTTP %1$d with code %2$s: %3$s"
+msgstr ""
+
+#. translators: 1: HTTP status, 2: error message.
+#: src/Client/Response.php:126
+#, php-format
+msgid "HTTP %1$d: %2$s"
+msgstr ""
+
+#. translators: %d: HTTP status.
+#: src/Client/Response.php:134
+#, php-format
+msgid "HTTP %d"
+msgstr ""
+
+#. translators: 1: HTTP method, 2: request path, 3: outcome summary.
+#: src/Client/SupabaseClient.php:421
+#, php-format
+msgid "%1$s %2$s failed: %3$s"
+msgstr ""
+
+#: src/Diagnostics/Checks/AuthCheck.php:31
+msgid "Authentication"
+msgstr ""
+
+#. translators: %d: HTTP status.
+#: src/Diagnostics/Checks/AuthCheck.php:66
+#, php-format
+msgid "The service role key was accepted (HTTP %d). Note this confirms the key is valid for this project, not that it has table privileges."
+msgstr ""
+
+#. translators: 1: observed response, 2: explanation.
+#: src/Diagnostics/Checks/AuthCheck.php:79
+#, php-format
+msgid "/rest/v1/ returned %1$s. %2$s"
+msgstr ""
+
+#: src/Diagnostics/Checks/ColumnsCheck.php:31
+msgid "Column agreement"
+msgstr ""
+
+#. translators: %s: table name.
+#: src/Diagnostics/Checks/ColumnsCheck.php:55
+#, php-format
+msgid "Could not read the column list for public.%s from the API description, so column drift could not be ruled out."
+msgstr ""
+
+#: src/Diagnostics/Checks/ColumnsCheck.php:58
+msgid "This is not itself a failure. If writes are rejected with PGRST204 or 42703, compare your table against `wp supabase schema --print`."
+msgstr ""
+
+#. translators: 1: table name, 2: comma-separated column list.
+#: src/Diagnostics/Checks/ColumnsCheck.php:72
+#, php-format
+msgid "public.%1$s is missing columns the plugin writes: %2$s"
+msgstr ""
+
+#: src/Diagnostics/Checks/ColumnsCheck.php:76
+msgid "The table and the plugin have drifted apart. Regenerate the migration with `wp supabase schema --print` and apply the difference. Writes will fail with PGRST204 until you do."
+msgstr ""
+
+#. translators: 1: count of mapped columns, 2: comma-separated extra columns.
+#: src/Diagnostics/Checks/ColumnsCheck.php:90
+#, php-format
+msgid "All %1$d mapped columns are present. The table also has columns the plugin does not write, which is fine as long as they are nullable or have defaults: %2$s"
+msgstr ""
+
+#. translators: %d: number of columns.
+#: src/Diagnostics/Checks/ColumnsCheck.php:102
+#, php-format
+msgid "All %d mapped columns are present and the table matches the plugin exactly."
+msgstr ""
+
+#: src/Diagnostics/Checks/CronCheck.php:34
+msgid "Scheduled processing"
+msgstr ""
+
+#: src/Diagnostics/Checks/CronCheck.php:49
+msgid "The queue processing event is not scheduled, so nothing will be synced automatically."
+msgstr ""
+
+#: src/Diagnostics/Checks/CronCheck.php:50
+msgid "Deactivate and reactivate the plugin to reschedule it. If it does not stick, another plugin or a wp-config setting may be clearing scheduled events."
+msgstr ""
+
+#. translators: %s: human-readable time difference.
+#: src/Diagnostics/Checks/CronCheck.php:60
+#, php-format
+msgid "Next run due in %s."
+msgstr ""
+
+#: src/Diagnostics/Checks/CronCheck.php:68
+msgid "The event is scheduled, but DISABLE_WP_CRON is set in wp-config.php, so WordPress will not run it on its own."
+msgstr ""
+
+#: src/Diagnostics/Checks/CronCheck.php:69
+msgid "That is a perfectly good setup as long as something external triggers it. Add a real cron job hitting wp-cron.php, or better, one running: wp supabase sync --all"
+msgstr ""
+
+#. translators: 1: number of queued items, 2: next run description.
+#: src/Diagnostics/Checks/CronCheck.php:84
+#, php-format
+msgid "The processor has never run, and %1$d item(s) are waiting. %2$s"
+msgstr ""
+
+#: src/Diagnostics/Checks/CronCheck.php:88
+msgid "WP-Cron only fires on a page view, so visit the site, or run `wp supabase sync --all` to drain the queue now. On a low-traffic site, a real cron job hitting wp-cron.php is far more reliable."
+msgstr ""
+
+#. translators: %s: next run description.
+#: src/Diagnostics/Checks/CronCheck.php:97
+#, php-format
+msgid "Scheduled and the queue is empty, so there has been nothing to do. %s"
+msgstr ""
+
+#. translators: 1: how long ago, 2: number of queued items.
+#: src/Diagnostics/Checks/CronCheck.php:112
+#, php-format
+msgid "The processor last ran %1$s ago and %2$d item(s) are still waiting, so scheduled processing has stalled."
+msgstr ""
+
+#: src/Diagnostics/Checks/CronCheck.php:116
+msgid "WP-Cron depends on site traffic. Set up a real cron job — every minute, running `wp supabase sync --all`, or hitting wp-cron.php — and set DISABLE_WP_CRON to true so the two do not overlap."
+msgstr ""
+
+#. translators: 1: last run description, 2: next run description.
+#: src/Diagnostics/Checks/CronCheck.php:125
+#, php-format
+msgid "Last run %1$s. %2$s"
+msgstr ""
+
+#: src/Diagnostics/Checks/GrantsCheck.php:39
+msgid "Table privileges (GRANT)"
+msgstr ""
+
+#. translators: %s: table name.
+#: src/Diagnostics/Checks/GrantsCheck.php:61
+#, php-format
+msgid "The service role key can select from public.%s, so the table privileges are in place."
+msgstr ""
+
+#. translators: 1: table name, 2: raw error message.
+#: src/Diagnostics/Checks/GrantsCheck.php:75
+#, php-format
+msgid "The service role key was refused with 42501 on public.%1$s: \"%2$s\". This is a missing GRANT, not a policy problem — without table privileges Postgres never reaches row level security, so the policies on this table are currently unreachable and editing them will change nothing."
+msgstr ""
+
+#. translators: %s: SQL.
+#: src/Diagnostics/Checks/GrantsCheck.php:81
+#, php-format
+msgid ""
+"Note that service_role needs the grant too. It bypasses row level security, but not table privileges:\n"
+"\n"
+"%s"
+msgstr ""
+
+#. translators: 1: observed response, 2: explanation.
+#: src/Diagnostics/Checks/GrantsCheck.php:95
+#: src/Diagnostics/Checks/TableExistsCheck.php:78
+#: src/Diagnostics/Checks/TableExistsCheck.php:96
+#, php-format
+msgid "%1$s. %2$s"
+msgstr ""
+
+#: src/Diagnostics/Checks/KeyShapeCheck.php:30
+#: src/Settings/SettingsPage.php:574
+msgid "Service role key shape"
+msgstr ""
+
+#. translators: %s: masked key fingerprint.
+#: src/Diagnostics/Checks/KeyShapeCheck.php:46
+#, php-format
+msgid "The key %s has expired. Supabase will reject it with PGRST301."
+msgstr ""
+
+#: src/Diagnostics/Checks/KeyShapeCheck.php:49
+msgid "Copy a current key from Settings → API Keys in your Supabase dashboard."
+msgstr ""
+
+#. translators: %s: masked key fingerprint.
+#: src/Diagnostics/Checks/KeyShapeCheck.php:60
+#, php-format
+msgid "The key in the service role field (%s) is an anon or publishable key."
+msgstr ""
+
+#: src/Diagnostics/Checks/KeyShapeCheck.php:63
+msgid "Replace it with the service role key — \"secret\" in current projects. This matters more than it looks: an anon key does not fail loudly, it just gets filtered by row level security, so syncing will appear to work while writing nothing at all."
+msgstr ""
+
+#: src/Diagnostics/Checks/KeyShapeCheck.php:78
+msgid "The plugin could not determine this key's role, so it will try to use it anyway. If writes fail, confirm you copied the service role (secret) key rather than the publishable one."
+msgstr ""
+
+#: src/Diagnostics/Checks/QueueHealthCheck.php:34
+msgid "Queue health"
+msgstr ""
+
+#. translators: 1: pending count, 2: ready count, 3: dead count.
+#: src/Diagnostics/Checks/QueueHealthCheck.php:46
+#, php-format
+msgid "%1$d pending (%2$d ready now), %3$d dead-lettered."
+msgstr ""
+
+#. translators: 1: dead count, 2: queue summary.
+#: src/Diagnostics/Checks/QueueHealthCheck.php:60
+#, php-format
+msgid "%1$d item(s) have been dead-lettered and will not be retried automatically. %2$s"
+msgstr ""
+
+#: src/Diagnostics/Checks/QueueHealthCheck.php:64
+msgid "Look at why: `wp supabase queue list --dead` shows the stored error for each. Fix the cause, then `wp supabase queue retry --all`."
+msgstr ""
+
+#. translators: 1: age of oldest item, 2: queue summary.
+#: src/Diagnostics/Checks/QueueHealthCheck.php:77
+#, php-format
+msgid "The oldest queued item has been waiting %1$s. %2$s"
+msgstr ""
+
+#: src/Diagnostics/Checks/QueueHealthCheck.php:81
+msgid "Either processing is not running — see the scheduled processing check — or items are failing and backing off. The logs page shows the errors."
+msgstr ""
+
+#. translators: %s: queue summary.
+#: src/Diagnostics/Checks/QueueHealthCheck.php:92
+#, php-format
+msgid "The queue is deep but moving. %s"
+msgstr ""
+
+#: src/Diagnostics/Checks/QueueHealthCheck.php:95
+msgid "Normal after a backfill. If it is not draining fast enough, raise the batch size or run `wp supabase sync --all` from a real cron job rather than relying on WP-Cron."
+msgstr ""
+
+#: src/Diagnostics/Checks/QueueHealthCheck.php:100
+msgid "The queue is empty; everything has been synced."
+msgstr ""
+
+#: src/Diagnostics/Checks/ReachableCheck.php:31
+msgid "Reachability"
+msgstr ""
+
+#. translators: 1: project URL, 2: transport error detail.
+#: src/Diagnostics/Checks/ReachableCheck.php:53
+#, php-format
+msgid "No HTTP response from %1$s — %2$s"
+msgstr ""
+
+#. translators: 1: project URL, 2: HTTP status.
+#: src/Diagnostics/Checks/ReachableCheck.php:67
+#, php-format
+msgid "%1$s/rest/v1/ answered with HTTP %2$d without credentials, so the host is reachable and speaking HTTP."
+msgstr ""
+
+#: src/Diagnostics/Checks/RlsAnonCheck.php:34
+msgid "Public read policy"
+msgstr ""
+
+#: src/Diagnostics/Checks/RlsAnonCheck.php:48
+msgid "No anon key is configured, so what the public can see cannot be tested. Add the anon (publishable) key under Settings → Supabase Sync to enable this check."
+msgstr ""
+
+#. translators: %s: table name.
+#: src/Diagnostics/Checks/RlsAnonCheck.php:76
+#, php-format
+msgid "The anon key was refused with 42501 on public.%s. The public read policy is unreachable because anon has no table privilege — again a GRANT, not a policy."
+msgstr ""
+
+#. translators: %s: SQL.
+#: src/Diagnostics/Checks/RlsAnonCheck.php:81
+#, php-format
+msgid ""
+"Run:\n"
+"\n"
+"%s"
+msgstr ""
+
+#. translators: 1: observed response, 2: explanation.
+#: src/Diagnostics/Checks/RlsAnonCheck.php:93
+#, php-format
+msgid "Reading with the anon key failed: %1$s. %2$s"
+msgstr ""
+
+#: src/Diagnostics/Checks/RlsAnonCheck.php:109
+msgid "The anon key can read published rows, so a public frontend using the anon key will see your content."
+msgstr ""
+
+#: src/Diagnostics/Checks/RlsAnonCheck.php:118
+msgid "There are no published rows in the mirror yet, so there is nothing for the policy to return. Sync some content and run this again."
+msgstr ""
+
+#. translators: %s: table name.
+#: src/Diagnostics/Checks/RlsAnonCheck.php:128
+#, php-format
+msgid "The service role key can see published rows in public.%s but the anon key gets an empty array. Row level security is enabled and no policy grants anon a read, so PostgREST filters everything out and returns [] with no error."
+msgstr ""
+
+#. translators: %s: SQL.
+#: src/Diagnostics/Checks/RlsAnonCheck.php:133
+#, php-format
+msgid ""
+"Add the public read policy:\n"
+"\n"
+"%s"
+msgstr ""
+
+#: src/Diagnostics/Checks/RlsLeakCheck.php:37
+msgid "Unpublished content is not public"
+msgstr ""
+
+#: src/Diagnostics/Checks/RlsLeakCheck.php:51
+msgid "No anon key is configured, so this cannot be tested. This is the one check worth adding the anon key for: it is the difference between knowing your unpublished content is private and assuming it."
+msgstr ""
+
+#. translators: %s: observed response.
+#: src/Diagnostics/Checks/RlsLeakCheck.php:64
+#, php-format
+msgid "Could not write the probe row needed for this test (%s), so leakage could not be assessed."
+msgstr ""
+
+#. translators: %s: observed response.
+#: src/Diagnostics/Checks/RlsLeakCheck.php:92
+#, php-format
+msgid "The anon key could not read the unpublished probe row (%s), so unpublished content is not exposed."
+msgstr ""
+
+#. translators: %s: probe status value.
+#: src/Diagnostics/Checks/RlsLeakCheck.php:106
+#, php-format
+msgid "A probe row with status \"%s\" was written and the anon key could not see it. The read policy correctly restricts the public to published rows."
+msgstr ""
+
+#. translators: 1: table name, 2: probe status.
+#: src/Diagnostics/Checks/RlsLeakCheck.php:117
+#, php-format
+msgid "SECURITY: the anon key read a row with status \"%2$s\" from public.%1$s. The read policy is not restricted to published rows, so anyone holding your anon key — which is public by design and shipped to browsers — can read every row in this table, including anything unpublished that ever lands in it."
+msgstr ""
+
+#. translators: %s: SQL.
+#: src/Diagnostics/Checks/RlsLeakCheck.php:123
+#, php-format
+msgid ""
+"Replace the policy so it filters on status. This drops the existing policy of the same name and recreates it correctly:\n"
+"\n"
+"%s"
+msgstr ""
+
+#: src/Diagnostics/Checks/SettingsCheck.php:25
+msgid "Settings"
+msgstr ""
+
+#: src/Diagnostics/Checks/SettingsCheck.php:41
+msgid "Neither a project URL nor a service role key is configured."
+msgstr ""
+
+#: src/Diagnostics/Checks/SettingsCheck.php:42
+msgid "Add both under Settings → Supabase Sync. The project URL and keys are in your Supabase dashboard under Settings → Data API and Settings → API Keys."
+msgstr ""
+
+#: src/Diagnostics/Checks/SettingsCheck.php:50
+msgid "No project URL is configured, or what was entered is not a valid http/https URL."
+msgstr ""
+
+#: src/Diagnostics/Checks/SettingsCheck.php:51
+msgid "Set the project URL under Settings → Supabase Sync. It looks like https://yourproject.supabase.co — the bare project URL, with no /rest/v1 on the end."
+msgstr ""
+
+#: src/Diagnostics/Checks/SettingsCheck.php:59
+msgid "No service role key is configured, so the plugin cannot write anything."
+msgstr ""
+
+#. translators: %s: PHP define() statement.
+#: src/Diagnostics/Checks/SettingsCheck.php:62
+#, php-format
+msgid "Add it under Settings → Supabase Sync, or better, define it in wp-config.php: %s"
+msgstr ""
+
+#. translators: 1: project URL, 2: table name, 3: site id.
+#: src/Diagnostics/Checks/SettingsCheck.php:70
+#, php-format
+msgid "Project URL %1$s, table public.%2$s, site ID \"%3$s\"."
+msgstr ""
+
+#: src/Diagnostics/Checks/SettingsCheck.php:81
+msgid "The service role key is stored in the WordPress database."
+msgstr ""
+
+#. translators: %s: PHP define() statement.
+#: src/Diagnostics/Checks/SettingsCheck.php:84
+#, php-format
+msgid "That key bypasses row level security, so every database backup and staging clone now contains full access to your Supabase project. Move it to wp-config.php and clear it from the settings screen: %s"
+msgstr ""
+
+#: src/Diagnostics/Checks/SettingsCheck.php:90
+msgid "The service role key comes from wp-config.php."
+msgstr ""
+
+#: src/Diagnostics/Checks/TableExistsCheck.php:27
+msgid "Mirror table exists"
+msgstr ""
+
+#. translators: %s: table name.
+#: src/Diagnostics/Checks/TableExistsCheck.php:49
+#, php-format
+msgid "public.%s exists and is exposed through the Data API."
+msgstr ""
+
+#. translators: %s: table name.
+#: src/Diagnostics/Checks/TableExistsCheck.php:64
+#, php-format
+msgid "public.%s exists — the request was refused on privileges, not on the table being missing. See the table privileges check below."
+msgstr ""
+
+#. translators: %s: SQL migration.
+#: src/Diagnostics/Checks/TableExistsCheck.php:84
+#, php-format
+msgid ""
+"Apply the migration below in the Supabase SQL editor. It is also available from `wp supabase schema --print`.\n"
+"\n"
+"%s"
+msgstr ""
+
+#: src/Diagnostics/Checks/WriteCheck.php:35
+msgid "Write access"
+msgstr ""
+
+#. translators: %s: table name.
+#: src/Diagnostics/Checks/WriteCheck.php:61
+#, php-format
+msgid "Inserted a probe row into public.%s and deleted it again, so the full write path works."
+msgstr ""
+
+#. translators: 1: observed response, 2: explanation.
+#: src/Diagnostics/Checks/WriteCheck.php:74
+#, php-format
+msgid "Writing a probe row failed: %1$s. %2$s"
+msgstr ""
+
+#. translators: %s: label of the check that failed.
+#: src/Diagnostics/DiagnosticsRunner.php:98
+#, php-format
+msgid "Not run, because \"%s\" did not pass. Fix that first — this check cannot produce a meaningful answer until it does."
+msgstr ""
+
+#. translators: 1: check id, 2: exception message.
+#: src/Diagnostics/DiagnosticsRunner.php:130
+#, php-format
+msgid "Check \"%1$s\" threw: %2$s"
+msgstr ""
+
+#. translators: %s: exception message.
+#: src/Diagnostics/DiagnosticsRunner.php:142
+#, php-format
+msgid "This check could not complete because of an unexpected error: %s"
+msgstr ""
+
+#: src/Diagnostics/DiagnosticsRunner.php:145
+msgid "This is a bug in the plugin rather than a problem with your configuration. The logs page has the details."
+msgstr ""
+
+#. translators: 1: pass count, 2: warn count, 3: fail count, 4: skip count.
+#: src/Diagnostics/DiagnosticsRunner.php:184
+#, php-format
+msgid "Diagnostics run: %1$d passed, %2$d warnings, %3$d failed, %4$d skipped."
+msgstr ""
+
+#. translators: %s: transport error message.
+#: src/Diagnostics/ErrorTranslator.php:117
+#, php-format
+msgid "WordPress could not reach Supabase at all: %s"
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:120
+msgid "Check the project URL, and whether this host allows outbound HTTPS. If WordPress runs in a container, the host machine is not \"localhost\" from inside it. WP_HTTP_BLOCK_EXTERNAL in wp-config.php will also do this."
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:137
+msgid "A row level security policy rejected the row. The privileges are fine — a policy's WITH CHECK condition refused this particular data."
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:138
+msgid "Either loosen the policy, or write with the service role key, which bypasses row level security. Confirm the key in settings is the service role key and not the anon key."
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:145
+msgid "Permission denied on the table. This is a missing GRANT, not a policy problem: without table privileges Postgres never even consults row level security, so adding or fixing policies will change nothing."
+msgstr ""
+
+#. translators: %s: table name.
+#: src/Diagnostics/ErrorTranslator.php:157
+#, php-format
+msgid "The table public.%s does not exist."
+msgstr ""
+
+#. translators: %s: table name.
+#: src/Diagnostics/ErrorTranslator.php:169
+#, php-format
+msgid "PostgREST cannot find public.%s in its schema cache. Either the migration has not been applied, or it has and PostgREST has not noticed yet."
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:172
+msgid "Apply the migration (wp supabase schema --print). If you just applied it, reload the schema cache — on hosted Supabase this happens automatically within a few seconds, or run: notify pgrst, 'reload schema';"
+msgstr ""
+
+#. translators: %s: the error message naming the column.
+#: src/Diagnostics/ErrorTranslator.php:181
+#, php-format
+msgid "A column the plugin tried to write does not exist in the table: %s"
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:184
+msgid "The table and the plugin's field list have drifted apart. Regenerate the migration with `wp supabase schema --print` and apply the difference."
+msgstr ""
+
+#. translators: %s: the error message naming the column.
+#: src/Diagnostics/ErrorTranslator.php:192
+#, php-format
+msgid "Postgres rejected a column that does not exist: %s"
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:195
+msgid "Regenerate the migration with `wp supabase schema --print` and apply the difference."
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:202
+msgid "Copy the service role key again from Settings → API Keys in your Supabase dashboard, and confirm it belongs to the same project as the configured URL."
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:209
+msgid "The JWT has expired."
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:210
+msgid "Copy a current key from Settings → API Keys."
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:217
+msgid "A unique constraint was violated, so the upsert was treated as a plain insert."
+msgstr ""
+
+#. translators: %s: table name.
+#: src/Diagnostics/ErrorTranslator.php:220
+#, php-format
+msgid "The request needs on_conflict=site_id,wp_id together with the header Prefer: resolution=merge-duplicates. Also confirm public.%s still has its unique (site_id, wp_id) constraint — without it there is nothing for on_conflict to target."
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:228
+msgid "A foreign key constraint was violated: a row this one points at does not exist."
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:229
+msgid "Sync the parent record first. The default mirror table has no foreign keys, so this suggests the table was customised."
+msgstr ""
+
+#. translators: %s: the error message naming the column.
+#: src/Diagnostics/ErrorTranslator.php:237
+#, php-format
+msgid "A NOT NULL column received no value: %s"
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:240
+msgid "Either the table has columns the plugin does not know about, or a required field mapped to null. Regenerate the schema with `wp supabase schema --print`."
+msgstr ""
+
+#. translators: %s: the error message.
+#: src/Diagnostics/ErrorTranslator.php:248
+#, php-format
+msgid "Postgres could not parse a value the plugin sent: %s"
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:251
+msgid "Usually a column type mismatch — for example a text column where the mapper writes jsonb. Compare the table against `wp supabase schema --print`."
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:257
+msgid "Postgres refused the connection: too many clients already."
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:258
+msgid "This plugin talks to PostgREST over HTTPS and does not hold Postgres connections itself, so the pressure is coming from elsewhere in your project. Consider the connection pooler for whatever does."
+msgstr ""
+
+#. translators: 1: HTTP status, 2: error message.
+#: src/Diagnostics/ErrorTranslator.php:272
+#, php-format
+msgid "Supabase rejected the request with HTTP %1$d: %2$s"
+msgstr ""
+
+#. translators: %d: HTTP status.
+#: src/Diagnostics/ErrorTranslator.php:278
+#, php-format
+msgid "Supabase rejected the request with HTTP %d and no explanation, which usually means the API gateway refused the key before PostgREST saw it."
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:281
+msgid "Check that the API key is correct and belongs to the project in the configured URL."
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:289
+msgid "The endpoint was not found. The host answered, but not with PostgREST."
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:290
+msgid "Check the project URL is the API URL, not the dashboard or Studio URL. The plugin appends /rest/v1 itself, so the setting should be the bare project URL."
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:297
+msgid "Supabase is rate limiting these requests."
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:298
+msgid "Lower the batch size, or sync less often. The queue will retry with a growing delay on its own."
+msgstr ""
+
+#. translators: %d: HTTP status.
+#: src/Diagnostics/ErrorTranslator.php:309
+#, php-format
+msgid "Supabase returned a server error (HTTP %d)."
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:312
+msgid "Nothing to change on this side. The queue will retry with a growing delay; check status.supabase.com if it persists."
+msgstr ""
+
+#. translators: %s: response summary.
+#: src/Diagnostics/ErrorTranslator.php:322
+#, php-format
+msgid "Unexpected response from Supabase: %s"
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:325
+msgid "Check the logs page for the full response, and the diagnostics page for which layer is at fault."
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:336
+msgid "The API key has expired."
+msgstr ""
+
+#. translators: %s: the raw error message.
+#: src/Diagnostics/ErrorTranslator.php:342
+#, php-format
+msgid "The API key is not a JWT at all — Supabase could not even split it into its three parts (%s). This is usually a truncated or partial paste."
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:348
+msgid "The API key is well-formed but was signed by a different project, so this project cannot verify it. The key and the project URL do not belong together."
+msgstr ""
+
+#. translators: %s: the raw error message.
+#: src/Diagnostics/ErrorTranslator.php:353
+#, php-format
+msgid "Supabase rejected the API key: %s"
+msgstr ""
+
+#. translators: %s: SQL statements.
+#: src/Diagnostics/ErrorTranslator.php:364
+#, php-format
+msgid ""
+"Run this in the Supabase SQL editor:\n"
+"\n"
+"%s"
+msgstr ""
+
+#: src/Diagnostics/ErrorTranslator.php:373
+msgid "Apply the migration. Generate it with `wp supabase schema --print`, or copy it from the Diagnostics page, and run it in the Supabase SQL editor."
+msgstr ""
+
+#: src/Plugin.php:93
+msgid "Every minute (WP Supabase Sync)"
+msgstr ""
+
+#: src/Settings/KeyInspector.php:92
+msgid "No key set."
+msgstr ""
+
+#: src/Settings/KeyInspector.php:101
+msgid "Current-generation Supabase secret key. Opaque by design, so its role is read from the key prefix rather than from a claim."
+msgstr ""
+
+#: src/Settings/KeyInspector.php:110
+msgid "Current-generation Supabase publishable key. Safe to expose to browsers, and not usable for syncing."
+msgstr ""
+
+#: src/Settings/KeyInspector.php:119
+msgid "This does not look like a Supabase API key. Expected either a JWT beginning \"eyJ\" or a key beginning \"sb_secret_\" / \"sb_publishable_\"."
+msgstr ""
+
+#: src/Settings/KeyInspector.php:130
+msgid "This is a JWT but it has no \"role\" claim, so it is probably a user access token rather than a project API key."
+msgstr ""
+
+#: src/Settings/KeyInspector.php:142
+msgid "This key expired. Supabase will reject it with PGRST301."
+msgstr ""
+
+#: src/Settings/KeyInspector.php:181
+msgid "Not set."
+msgstr ""
+
+#. translators: %s: masked key fingerprint.
+#: src/Settings/KeyInspector.php:187
+#, php-format
+msgid "%s — role could not be determined."
+msgstr ""
+
+#. translators: 1: masked key fingerprint, 2: role name.
+#: src/Settings/KeyInspector.php:197
+#, php-format
+msgid "%1$s — role claim says \"%2$s\"."
+msgstr ""
+
+#. translators: 1: masked key fingerprint, 2: role name.
+#: src/Settings/KeyInspector.php:199
+#, php-format
+msgid "%1$s — key prefix indicates \"%2$s\"."
+msgstr ""
+
+#: src/Settings/Settings.php:350
+msgid "Table name must be lowercase letters, numbers and underscores, starting with a letter or underscore. Reverted to wp_content."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:89
+msgid "Testing…"
+msgstr ""
+
+#: src/Settings/SettingsPage.php:90
+#: src/Settings/SettingsPage.php:153
+msgid "Test Connection"
+msgstr ""
+
+#: src/Settings/SettingsPage.php:91
+msgid "The test could not run. Check the browser console and your PHP error log."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:99
+msgid "You do not have permission to manage these settings."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:106
+msgid "Mirrors published WordPress content into a Supabase table so another frontend can read it directly. WordPress stays the source of truth."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:123
+msgid "Save Settings"
+msgstr ""
+
+#: src/Settings/SettingsPage.php:141
+msgid "Connection"
+msgstr ""
+
+#: src/Settings/SettingsPage.php:144
+msgid "Add your project URL and service role key below, save, then run the test."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:159
+msgid "Syncing is currently off. That is the default: the plugin will not write to your database until you have confirmed the connection works."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:169
+msgid "Supabase project"
+msgstr ""
+
+#: src/Settings/SettingsPage.php:175
+msgid "Service role key"
+msgstr ""
+
+#: src/Settings/SettingsPage.php:179
+msgid "Used for all writes. It bypasses row level security, so treat it like a database password — define it in wp-config.php rather than storing it here."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:183
+msgid "Anon key"
+msgstr ""
+
+#: src/Settings/SettingsPage.php:187
+msgid "Optional, and never used for writing. Diagnostics uses it to confirm that the public can read published rows and cannot read anything else."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:199
+msgid "Project URL"
+msgstr ""
+
+#. translators: %s: PHP constant name.
+#: src/Settings/SettingsPage.php:209
+#, php-format
+msgid "Set in wp-config.php via %s."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:219
+msgid "The project URL from Settings → Data API in your Supabase dashboard. Paste the base URL only; the plugin appends /rest/v1 itself."
+msgstr ""
+
+#. translators: %s: PHP constant name.
+#: src/Settings/SettingsPage.php:257
+#, php-format
+msgid "— set in wp-config.php via %s."
+msgstr ""
+
+#. translators: %s: masked key fingerprint.
+#: src/Settings/SettingsPage.php:274
+#, php-format
+msgid "A key is stored (%s). Leave this blank to keep it."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:282
+msgid "Remove the stored key"
+msgstr ""
+
+#: src/Settings/SettingsPage.php:310
+msgid "This key has expired. Supabase will reject it with PGRST301."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:312
+msgid "This looks like a publishable or anon key, not a service role key. Writes will be silently filtered by row level security rather than failing loudly."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:314
+msgid "This looks like a service role key, not an anon key. Diagnostics uses this key to prove that the public cannot see unpublished rows, and a service key bypasses row level security entirely — so that check would wrongly appear to pass."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:325
+msgid "Check this key:"
+msgstr ""
+
+#: src/Settings/SettingsPage.php:333
+msgid "What gets mirrored"
+msgstr ""
+
+#: src/Settings/SettingsPage.php:340
+msgid "Site ID"
+msgstr ""
+
+#: src/Settings/SettingsPage.php:343
+msgid "Identifies this site in the mirror table. Several WordPress sites can share one Supabase project as long as each has a distinct Site ID — it is half of the uniqueness constraint used for upserts. Changing it later orphans the rows written under the old value."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:350
+msgid "Table name"
+msgstr ""
+
+#: src/Settings/SettingsPage.php:353
+msgid "The table in your public schema that content is written to. Lowercase letters, numbers and underscores only."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:356
+msgid "Post types"
+msgstr ""
+
+#: src/Settings/SettingsPage.php:373
+msgid "Only public post types are listed. Private ones have no business in a table a public frontend reads."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:383
+msgid "Meta keys"
+msgstr ""
+
+#: src/Settings/SettingsPage.php:386
+msgid "One key per line. This is an allowlist, and deliberately empty by default: post meta routinely holds page-builder blobs and third-party plugin state that should not be published."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:395
+msgid "Behaviour"
+msgstr ""
+
+#: src/Settings/SettingsPage.php:401
+msgid "Enable syncing"
+msgstr ""
+
+#: src/Settings/SettingsPage.php:404
+msgid "Write changes to Supabase"
+msgstr ""
+
+#: src/Settings/SettingsPage.php:405
+msgid "Off by default. Run the connection test first."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:412
+msgid "Batch size"
+msgstr ""
+
+#. translators: %d: maximum batch size.
+#: src/Settings/SettingsPage.php:418
+#, php-format
+msgid "How many queued changes are sent per request. Maximum %d."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:426
+msgid "Uninstall"
+msgstr ""
+
+#: src/Settings/SettingsPage.php:429
+msgid "Delete this plugin's tables and settings when it is uninstalled"
+msgstr ""
+
+#: src/Settings/SettingsPage.php:430
+msgid "Only affects WordPress. Nothing in Supabase is ever deleted by uninstalling."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:466
+msgid "You do not have permission to run this test."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:479
+msgid "Connection test run from the settings screen."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:498
+#: src/Settings/SettingsPage.php:510
+msgid "Configuration"
+msgstr ""
+
+#: src/Settings/SettingsPage.php:501
+msgid "No project URL is set."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:502
+msgid "No service role key is set."
+msgstr ""
+
+#. translators: %s: project URL.
+#: src/Settings/SettingsPage.php:514
+#, php-format
+msgid "Project URL is %s, and a service role key is set."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:522
+msgid "Reachability and authentication (service role key)"
+msgstr ""
+
+#: src/Settings/SettingsPage.php:538
+msgid "Authentication (anon key)"
+msgstr ""
+
+#: src/Settings/SettingsPage.php:554
+msgid "Skipped: the project could not be reached at all, so testing a second key would only repeat the same failure."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:581
+msgid "The key has expired, so Supabase will reject it with PGRST301. Copy a current key from Settings → API Keys."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:590
+msgid "This is an anon or publishable key, not a service role key. Row level security will filter every write instead of rejecting it, so syncing would appear to work while writing nothing."
+msgstr ""
+
+#. translators: %d: HTTP status code.
+#: src/Settings/SettingsPage.php:628
+#, php-format
+msgid "The PostgREST root returned HTTP %d and the key was accepted. This confirms reachability and a valid key; it does not confirm the key has table privileges — that needs the full diagnostics run."
+msgstr ""
+
+#. translators: 1: WP_Error code, 2: error message.
+#: src/Settings/SettingsPage.php:646
+#, php-format
+msgid "WordPress could not complete the request (%1$s: %2$s)."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:651
+msgid "Usually one of: the URL is wrong, outbound HTTP is blocked on this host, or WP_HTTP_BLOCK_EXTERNAL is set in wp-config.php. If WordPress is running in a container, note that the host machine is not \"localhost\" from inside it."
+msgstr ""
+
+#. translators: 1: request path, 2: outcome summary.
+#: src/Settings/SettingsPage.php:668
+#, php-format
+msgid "%1$s returned %2$s."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:676
+msgid "The key was rejected. Re-copy it from Settings → API Keys, and confirm it belongs to the same project as the URL above."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:683
+msgid "The project URL is reachable but is not serving PostgREST at /rest/v1/. Check that the URL is the project URL rather than the dashboard or Studio URL."
+msgstr ""
+
+#: src/Settings/SettingsPage.php:690
+msgid "That is a server-side error, so it is worth retrying before changing anything."
+msgstr ""
+
+#: src/Sync/SyncEngine.php:357
+msgid "Batch failed permanently and was dead-lettered."
+msgstr ""
+
+#: src/Sync/SyncEngine.php:358
+msgid "Batch failed and will be retried."
+msgstr ""
+
+#: src/Sync/SyncEngine.php:397
+#: src/Sync/SyncEngine.php:403
+msgid "never"
+msgstr ""
+
+#. translators: 1: how long ago, 2: succeeded count, 3: failed count.
+#: src/Sync/SyncEngine.php:408
+#, php-format
+msgid "%1$s ago (%2$d succeeded, %3$d failed)"
+msgstr ""
+
+#: src/Sync/SyncResult.php:38
+msgid "Content hash unchanged; nothing sent."
+msgstr ""
+
+#: src/Sync/SyncResult.php:42
+msgid "Syncing is turned off in settings."
+msgstr ""

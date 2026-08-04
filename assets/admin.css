@@ -1,0 +1,89 @@
+/**
+ * Admin styles for WP Supabase Sync.
+ */
+
+.wpsb-panel {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-left-width: 4px;
+	border-left-color: #72aee6;
+	padding: 1px 16px 12px;
+	margin: 20px 0;
+	max-width: 50em;
+}
+
+.wpsb-panel h2 {
+	margin-bottom: 0.4em;
+}
+
+.wpsb-hint {
+	color: #646970;
+	font-style: italic;
+	margin-bottom: 0;
+}
+
+.wpsb-warning {
+	background: #fcf9e8;
+	border-left: 4px solid #dba617;
+	padding: 8px 12px;
+	margin: 8px 0;
+	max-width: 40em;
+}
+
+.wpsb-results-list {
+	margin: 12px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.wpsb-result {
+	position: relative;
+	padding: 8px 12px 8px 34px;
+	margin: 0 0 6px;
+	border-left: 4px solid #c3c4c7;
+	background: #f6f7f7;
+}
+
+.wpsb-result p {
+	margin: 4px 0 0;
+	color: #3c434a;
+}
+
+.wpsb-badge {
+	position: absolute;
+	left: 12px;
+	top: 8px;
+	font-weight: 600;
+}
+
+.wpsb-result--pass {
+	border-left-color: #00a32a;
+}
+
+.wpsb-result--pass .wpsb-badge {
+	color: #00a32a;
+}
+
+.wpsb-result--fail {
+	border-left-color: #d63638;
+}
+
+.wpsb-result--fail .wpsb-badge {
+	color: #d63638;
+}
+
+.wpsb-result--warn {
+	border-left-color: #dba617;
+}
+
+.wpsb-result--warn .wpsb-badge {
+	color: #dba617;
+}
+
+.wpsb-result--skip {
+	border-left-color: #a7aaad;
+}
+
+.wpsb-result--skip .wpsb-badge {
+	color: #646970;
+}

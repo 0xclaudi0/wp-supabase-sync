@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<ruleset name="WP Supabase Sync">
+	<description>WordPress Coding Standards for WP Supabase Sync.</description>
+
+	<file>.</file>
+
+	<exclude-pattern>/vendor/*</exclude-pattern>
+	<exclude-pattern>/node_modules/*</exclude-pattern>
+	<exclude-pattern>/languages/*</exclude-pattern>
+	<exclude-pattern>/supabase/*</exclude-pattern>
+
+	<arg name="extensions" value="php"/>
+	<arg name="basepath" value="."/>
+	<arg name="colors"/>
+	<arg value="ps"/>
+
+	<rule ref="WordPress-Core"/>
+	<rule ref="WordPress-Docs"/>
+	<rule ref="WordPress-Extra"/>
+
+	<config name="minimum_wp_version" value="6.4"/>
+	<config name="testVersion" value="8.1-"/>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="wp-supabase-sync"/>
+			</property>
+		</properties>
+	</rule>
+
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="wpsb"/>
+				<element value="WPSB_"/>
+				<element value="WPSupabaseSync"/>
+			</property>
+		</properties>
+	</rule>
+
+	<!--
+		==========================================================================
+		Deliberate exclusions. Each one is a real conflict, not a silenced warning.
+		==========================================================================
+	-->
+
+	<!--
+		WordPress.Files.FileName expects procedural WordPress: `class-my-thing.php`
+		in a flat directory. SPEC §2 mandates the opposite — namespaced classes
+		under src/ on PSR-4 paths, loaded by a hand-rolled autoloader, matching the
+		author's other plugin. The two cannot both be satisfied, and the spec wins.
+		Nothing about file naming is a correctness or security property here.
+	-->
+	<rule ref="WordPress.Files.FileName">
+		<severity>0</severity>
+	</rule>
+
+	<!--
+		The verification scripts under tests/ are procedural harnesses executed via
+		`wp eval`, not shipped plugin code. Their local variables look like globals
+		to PHPCS, they read fixtures with file_get_contents, and they query the
+		database directly on purpose. Documentation sniffs are also not useful for
+		a linear assertion script.
+	-->
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+	<rule ref="WordPress.DB.DirectDatabaseQuery">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+	<rule ref="WordPress.DB.PreparedSQL">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+	<rule ref="WordPress.WP.GlobalVariablesOverride">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+	<rule ref="WordPress.WP.AlternativeFunctions">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+	<rule ref="WordPress.PHP.DevelopmentFunctions">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Squiz.Commenting">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Generic.Commenting">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+	<!--
+		The harnesses print to a terminal, not to a browser. Running their output
+		through esc_html() would corrupt it, not secure it.
+	-->
+	<rule ref="WordPress.Security.EscapeOutput">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+
+	<!--
+		Constructor property promotion and typed signatures carry the information a
+		@param tag would repeat. PHPCS's docblock sniffs predate both and ask for a
+		tag per parameter regardless, which turns a readable three-line constructor
+		into fifteen lines restating the types PHP already enforces. Docblocks are
+		still required wherever they say something the signature cannot — see the
+		"why" comments throughout src/.
+	-->
+	<rule ref="Squiz.Commenting.FunctionComment.Missing">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Squiz.Commenting.FunctionComment.MissingParamTag">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Squiz.Commenting.FunctionComment.MissingParamName">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Squiz.Commenting.VariableComment.Missing">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Squiz.Commenting.ClassComment.Missing">
+		<severity>0</severity>
+	</rule>
+
+	<!--
+		These two read `@param array<string, mixed>` and similar generics as a
+		malformed type hint. The annotations are correct and useful to static
+		analysis; PHPCS simply does not understand the syntax.
+	-->
+	<rule ref="Squiz.Commenting.FunctionComment.IncorrectTypeHint">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Squiz.Commenting.FunctionComment.ParamNameNoMatch">
+		<severity>0</severity>
+	</rule>
+
+	<!--
+		base64_decode is flagged as possible obfuscation. Here it decodes a JWT
+		payload to read the `role` claim, which is the entire purpose of
+		KeyInspector and is documented at length in that file.
+	-->
+	<rule ref="WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_decode">
+		<exclude-pattern>/src/Settings/KeyInspector.php</exclude-pattern>
+	</rule>
+</ruleset>
