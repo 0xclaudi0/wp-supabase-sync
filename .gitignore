@@ -16,5 +16,9 @@ package-lock.json
 # Local logs and scratch output
 *.log
 
+# Internal working notes, not for distribution
+SPEC.md
+CONTEXT.md
+
 # WordPress.org directory assets are NOT ignored — .wordpress-org/ is committed
 # and becomes SVN assets/ at deploy time. Listed here only so nobody adds it.

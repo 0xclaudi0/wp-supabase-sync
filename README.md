@@ -301,9 +301,6 @@ The `ErrorTranslator` is tested against **recorded real responses** in
 live stack. None of them is a string somebody imagined, which is why the `42501`
 disambiguation can be claimed honestly.
 
-See `CONTEXT.md` for versions, results, and the places where testing contradicted
-the original design and the design lost.
-
 ---
 
 ## Licence
