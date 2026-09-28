@@ -8,11 +8,7 @@
 [![WPCS](https://img.shields.io/badge/code%20style-WordPress-21759B)](https://github.com/WordPress/WordPress-Coding-Standards)
 [![Licence GPL-2.0-or-later](https://img.shields.io/badge/licence-GPL--2.0--or--later-blue)](LICENSE)
 
-
-
 https://github.com/user-attachments/assets/90d1179a-6933-470a-afee-6f7a46abd95a
-
-
 
 Mirrors WordPress content into a Supabase Postgres table, so a separate frontend
 — Next.js, a mobile app, anything — can query your content straight from Supabase
