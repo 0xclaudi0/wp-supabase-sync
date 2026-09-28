@@ -8,7 +8,7 @@
 [![WPCS](https://img.shields.io/badge/code%20style-WordPress-21759B)](https://github.com/WordPress/WordPress-Coding-Standards)
 [![Licence GPL-2.0-or-later](https://img.shields.io/badge/licence-GPL--2.0--or--later-blue)](LICENSE)
 
-[![Watch the 24-second demo](.github/brag.jpg)](.github/brag.mp4)
+[![Watch the 24-second demo](.github/brag.jpg)](https://cdn.jsdelivr.net/gh/0xclaudi0/wp-supabase-sync@bda894f/.github/brag.mp4)
 
 *24-second demo, with sound. Click to play.*
 
