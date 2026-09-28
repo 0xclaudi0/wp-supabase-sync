@@ -23,5 +23,5 @@ CONTEXT.md
 # WordPress.org directory assets are NOT ignored — .wordpress-org/ is committed
 # and becomes SVN assets/ at deploy time. Listed here only so nobody adds it.
 
-# /brag launch video working files (the final video lives in .github/)
-brag-output/
+# Launch video source and renders (the published video is a GitHub upload)
+launch-video/
